@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -43,6 +44,15 @@ public class Register extends HttpServlet {
 	    
 	    RegDao regdao = new RegDao(); 
 	    regdao.register(regdto);
+	    
+	    
+	 boolean s=regdao.register(regdto);
+	    
+	    if (s==true)
+	    {
+	    RequestDispatcher rd = request.getRequestDispatcher("/Success.html");
+	    rd.forward(request, response);
+	    } 
 	}
 
 }

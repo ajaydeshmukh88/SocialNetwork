@@ -42,6 +42,7 @@ public class RegDao {
 		if (i>0)
 		{
 			return true;
+			
 		}
 		else
 		{
