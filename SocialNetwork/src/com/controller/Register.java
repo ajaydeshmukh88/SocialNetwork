@@ -50,7 +50,7 @@ public class Register extends HttpServlet {
 	    
 	    if (s==true)
 	    {
-	    RequestDispatcher rd = request.getRequestDispatcher("/Success.html");
+	    RequestDispatcher rd = request.getRequestDispatcher("Success.html");
 	    rd.forward(request, response);
 	    } 
 	}
